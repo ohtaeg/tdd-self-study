@@ -9,7 +9,6 @@ Clean code that works.
 <br>
 
 ## 환경
-<br>
  - Open jdk 1.8 ⇧
  - Gradle
  - Junit5 + AssertJ + Mokito
