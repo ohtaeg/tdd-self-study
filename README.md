@@ -9,7 +9,7 @@ __Clean code that works.__
 <br>
 
 ## 환경
- - Open jdk 1.11
+ - Open jdk 11
  - Gradle
  - Junit5 + AssertJ + Mokito
 
