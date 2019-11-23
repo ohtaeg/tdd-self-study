@@ -18,7 +18,7 @@
  ## 프로젝트
  
  1. [경매](https://github.com/ohtaeg/tdd-self-study/tree/master/auction)
- 2. [야구게임]()
+ 2. [야구게임](https://github.com/ohtaeg/tdd-self-study/tree/master/baseball-game)
 
 
 
