@@ -1,6 +1,6 @@
 # Study
 
-## Clean code that works.
+__Clean code that works.__
 
 스스로 TDD 학습을 통해 잘 동작하는 깔끔한 코드를 작성하도록 노오력.
 
