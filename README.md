@@ -16,9 +16,9 @@ __Clean code that works.__
  <br>
 
  ## 프로젝트
- 
- 1. [경매](https://github.com/ohtaeg/tdd-self-study/tree/master/auction)
- 2. [야구게임](https://github.com/ohtaeg/tdd-self-study/tree/master/baseball-game)
+ 1. [문자열 덧셈 계산기](https://github.com/ohtaeg/ddd-kitchenpos/tree/step1)
+ 2. [경매](https://github.com/ohtaeg/tdd-self-study/tree/master/auction)
+ 3. [야구게임](https://github.com/ohtaeg/tdd-self-study/tree/master/baseball-game)
 
 
 
