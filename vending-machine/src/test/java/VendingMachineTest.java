@@ -18,7 +18,7 @@ class VendingMachineTest {
 
     @Test
     @DisplayName("[금액 출력] : 투입된 금액이 없을 경우 0원을 출력 한다.")
-    public void getReturnAmount_Zero() {
+    public void getReturnAmountZero() {
         assertThat(vendingMachine.getCurrentMoney()).isZero();
     }
 
@@ -36,7 +36,25 @@ class VendingMachineTest {
         assertThat(returnedAmount).isNotZero();
     }
 
+    @ParameterizedTest
+    @DisplayName("[동전 확인] : 우리나라 동전 금액 단위일 경우 true를 반환 한다.")
+    @ValueSource(ints = {10, 50, 100, 500})
+    public void isKoreaCoinUnitSuccess(int coin) {
+        // when
+        boolean isCorrect = vendingMachine.isCorrect(coin);
 
+        // then
+        assertThat(isCorrect).isTrue();
+    }
 
+    @ParameterizedTest
+    @DisplayName("[동전 확인] : 우리나라 동전 금액 단위가 아닐 경우 false를 반환 한다.")
+    @ValueSource(ints = {-10, 1, 12, 123})
+    public void isKoreaCoinUnitFail(int coin) {
+        // when
+        boolean isUse = vendingMachine.isCorrect(coin);
 
+        // then
+        assertThat(isUse).isFalse();
+    }
 }
