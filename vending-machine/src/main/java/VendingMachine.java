@@ -1,7 +1,11 @@
 public class VendingMachine {
-    private static final int DEFAULT_MONEY_ZERO = 0;
+    private int money;
 
     public int getCurrentMoney() {
-        return DEFAULT_MONEY_ZERO;
+        return this.money;
+    }
+
+    public void insertCoin(final int coin) {
+        this.money += coin;
     }
 }
