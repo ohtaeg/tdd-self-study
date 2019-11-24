@@ -11,15 +11,15 @@ __Clean code that works.__
 ## 환경
  - Open jdk 11
  - Gradle
- - Junit5 + AssertJ + Mokito
+ - Junit5 + AssertJ + Mockito
 
  <br>
 
- ## 프로젝트
- 1. [문자열 덧셈 계산기](https://github.com/ohtaeg/ddd-kitchenpos/tree/step1)
- 2. [경매](https://github.com/ohtaeg/tdd-self-study/tree/master/auction)
- 3. [야구게임](https://github.com/ohtaeg/tdd-self-study/tree/master/baseball-game)
-
+## 프로젝트
+1. [문자열 덧셈 계산기](https://github.com/ohtaeg/ddd-kitchenpos/tree/step1) (ing)
+2. [자판기](https://github.com/ohtaeg/tdd-self-study/tree/master/vending-machine) (ing)
+3. [야구게임](https://github.com/ohtaeg/tdd-self-study/tree/master/baseball-game)
+4. [경매](https://github.com/ohtaeg/tdd-self-study/tree/master/auction)
 
 
 
