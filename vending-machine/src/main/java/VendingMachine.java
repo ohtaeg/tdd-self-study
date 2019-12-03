@@ -1,20 +1,21 @@
 public class VendingMachine {
-    // TODO : 일급객체로 변환할 것.
-    private int money;
+    private CoinSet coinSet;
+    private WonNoteSet wonNoteSet;
 
-    public int getCurrentMoney() {
-        return this.money;
+    public VendingMachine() {
+        this.coinSet = CoinSet.createCoinSet();
+        this.wonNoteSet = WonNoteSet.createWonNoteSet();
     }
 
     public void insertCoin(final KoreaCoins coin) {
         if (isKoreaCoins(coin)) {
-            this.money += coin.getWon();
+            coinSet.add(coin);
         }
     }
 
     public void insertWonNote(final KoreaWonNote wonNote) {
         if (isKoreaWonNote(wonNote)) {
-            this.money += wonNote.getWon();
+            wonNoteSet.add(wonNote);
         }
     }
 
@@ -30,5 +31,17 @@ public class VendingMachine {
             throw new IllegalArgumentException("잘못된 지폐입니다.");
         }
         return true;
+    }
+
+    public int getCurrentMoney() {
+        return getCoinSet();
+    }
+
+    public int getCoinSet() {
+        return coinSet.getCoins();
+    }
+
+    public int getWonNoteSet() {
+        return wonNoteSet.getWonNotes();
     }
 }
