@@ -6,6 +6,8 @@ __Clean code that works.__
 
 인터넷을 통해 요구사항이 명확한 주제 위주로 연습, 숙달되면 스스로 요구사항 정립.
 
+[객체지향 생활 체조](https://wikibook.co.kr/thoughtworks-anthology/)를 준수 한다.
+
 <br>
 
 ## 환경
