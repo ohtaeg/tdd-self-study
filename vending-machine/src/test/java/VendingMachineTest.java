@@ -26,7 +26,7 @@ class VendingMachineTest {
     @EnumSource(value = KoreaCoins.class, names = {"TEN_WON", "FIFTY_WON", "ONE_HUNDRED_WON", "FIVE_HUNDRED_WON"})
     public void isKoreaCoinUnit(KoreaCoins coin) {
         // when
-        boolean isKoreaCoinUnit = vendingMachine.isKoreaCoinUnit(coin);
+        boolean isKoreaCoinUnit = vendingMachine.isKoreaCoins(coin);
 
         // then
         assertThat(isKoreaCoinUnit).isTrue();
