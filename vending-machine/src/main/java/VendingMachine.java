@@ -7,7 +7,7 @@ public class VendingMachine {
     }
 
     public void insertCoin(final KoreaCoins coin) {
-        if (isKoreaCoinUnit(coin)) {
+        if (isKoreaCoins(coin)) {
             this.money += coin.getWon();
         }
     }
@@ -18,30 +18,17 @@ public class VendingMachine {
         }
     }
 
-    // TODO : 인덴트 1칸으로 refactoring 필요.
-    public boolean isKoreaCoinUnit(final KoreaCoins coin) {
-        if (coin instanceof KoreaCoins) {
-            int won = coin.getWon();
-            for (KoreaCoins coinUnit : KoreaCoins.values()) {
-                if (coinUnit.getWon() == won) {
-                    return true;
-                }
-            }
+    public boolean isKoreaCoins(final KoreaCoins coin) {
+        if (!(coin instanceof KoreaCoins)) {
+            throw new IllegalArgumentException("잘못된 동전입니다.");
         }
-
-        return false;
+        return true;
     }
 
-    // TODO : 인덴트 1칸으로 refactoring 필요.
     public boolean isKoreaWonNote(final KoreaWonNote bill) {
-        if (bill instanceof KoreaWonNote) {
-            int won = bill.getWon();
-            for (KoreaWonNote wonNote : KoreaWonNote.values()) {
-                if (wonNote.getWon() == bill.getWon()) {
-                    return true;
-                }
-            }
+        if (!(bill instanceof KoreaWonNote)) {
+            throw new IllegalArgumentException("잘못된 지폐입니다.");
         }
-        return false;
+        return true;
     }
 }
