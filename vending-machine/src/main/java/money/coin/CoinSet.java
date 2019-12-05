@@ -1,4 +1,4 @@
-package coin;
+package money.coin;
 
 import java.util.ArrayList;
 import java.util.List;

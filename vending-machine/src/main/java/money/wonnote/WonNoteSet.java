@@ -1,4 +1,4 @@
-package wonnote;
+package money.wonnote;
 
 import java.util.ArrayList;
 import java.util.List;

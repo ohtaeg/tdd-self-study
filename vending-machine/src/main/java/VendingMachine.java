@@ -1,3 +1,8 @@
+import money.coin.CoinSet;
+import money.coin.KoreaCoins;
+import money.wonnote.KoreaWonNote;
+import money.wonnote.WonNoteSet;
+
 public class VendingMachine {
     private CoinSet coinSet;
     private WonNoteSet wonNoteSet;
