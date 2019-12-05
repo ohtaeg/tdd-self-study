@@ -5,7 +5,7 @@ import money.Money;
 
 import java.util.Arrays;
 
-public enum KoreaCoins {
+public enum KoreaCoinType {
     TEN_WON(Money.of(10), 10)
     , FIFTY_WON(Money.of(50), 50)
     , ONE_HUNDRED_WON(Money.of(100), 100)
@@ -14,7 +14,7 @@ public enum KoreaCoins {
     private Money money;
     private int won;
 
-    KoreaCoins(final Money money, final int won) {
+    KoreaCoinType(final Money money, final int won) {
         this.money = money;
         this.won = won;
     }
@@ -23,7 +23,7 @@ public enum KoreaCoins {
         return money;
     }
 
-    static KoreaCoins of(int won) {
+    static KoreaCoinType of(int won) {
         return Arrays.stream(values())
                      .filter(coin -> coin.won == won)
                      .findFirst()
