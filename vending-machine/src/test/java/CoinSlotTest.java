@@ -1,7 +1,7 @@
 
 import module.CoinSlot;
 import money.coin.Coin;
-import money.coin.KoreaCoins;
+import money.coin.KoreaCoinType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -16,7 +16,7 @@ class CoinSlotTest {
     @BeforeEach
     public void setup() {
         coinSlot = new CoinSlot();
-        coin = new Coin(KoreaCoins.FIFTY_WON);
+        coin = new Coin(KoreaCoinType.FIFTY_WON);
     }
 
     @DisplayName("동전 투입을 할 수 있다.")

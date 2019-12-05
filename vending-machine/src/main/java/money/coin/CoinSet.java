@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class CoinSet {
-    private List<KoreaCoins> coinSets;
+    private List<KoreaCoinType> coinSets;
 
-    private CoinSet(List<KoreaCoins> coinSets) {
+    private CoinSet(List<KoreaCoinType> coinSets) {
         this.coinSets = coinSets;
     }
 
@@ -14,15 +14,7 @@ public final class CoinSet {
         return new CoinSet(new ArrayList<>());
     }
 
-    public void add(KoreaCoins coin) {
+    public void add(KoreaCoinType coin) {
         this.coinSets.add(coin);
-    }
-
-    public int getCoins() {
-        int money = 0;
-        for (KoreaCoins coin : coinSets) {
-            money += coin.getWon();
-        }
-        return money;
     }
 }
