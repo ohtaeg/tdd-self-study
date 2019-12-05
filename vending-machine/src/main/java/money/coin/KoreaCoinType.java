@@ -13,18 +13,19 @@ public enum KoreaCoins {
 
     private Money money;
     private int won;
+
     KoreaCoins(final Money money, final int won) {
         this.money = money;
         this.won = won;
     }
 
-    public int getWon() {
-        return won;
+    public Money getMoney() {
+        return money;
     }
 
     static KoreaCoins of(int won) {
         return Arrays.stream(values())
-                     .filter(coin -> coin.getWon() == won)
+                     .filter(coin -> coin.won == won)
                      .findFirst()
                      .orElseThrow(() -> new InvalidCoinException());
     }
