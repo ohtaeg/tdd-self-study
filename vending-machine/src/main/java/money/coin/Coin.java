@@ -1,5 +1,7 @@
 package money.coin;
 
+import module.CoinChecker;
+
 public final class Coin<T extends Enum<KoreaCoinType>> {
     private final T coin;
     public Coin(T coin) {
@@ -7,7 +9,7 @@ public final class Coin<T extends Enum<KoreaCoinType>> {
     }
 
     public Coin(int value) {
-        this.coin = (T) KoreaCoinType.of(value);
+        this.coin = (T) CoinChecker.check(value);
     }
 
     public T getCoin() {

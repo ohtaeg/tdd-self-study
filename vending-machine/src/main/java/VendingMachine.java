@@ -1,12 +1,20 @@
-import money.coin.CoinSet;
-import money.wonnote.WonNoteSet;
+import module.CoinSet;
+import module.CoinSlot;
+import money.coin.Coin;
+import view.Screen;
 
 public class VendingMachine {
+    private CoinSlot coinSlot;
     private CoinSet coinSet;
-    private WonNoteSet wonNoteSet;
+    private Screen screen;
 
     public VendingMachine() {
-        this.coinSet = CoinSet.createCoinSet();
-        this.wonNoteSet = WonNoteSet.createWonNoteSet();
+        coinSlot = new CoinSlot();
+        screen = new Screen();
+    }
+
+    public void insert(Coin coin) {
+        coinSlot.insert(coin);
+        screen.display();
     }
 }

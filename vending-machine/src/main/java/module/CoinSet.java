@@ -1,12 +1,19 @@
-package money.coin;
+package module;
+
+import money.coin.Coin;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public final class CoinSet {
-    private List<KoreaCoinType> coinSets;
 
-    private CoinSet(List<KoreaCoinType> coinSets) {
+/**
+ * 동전 통
+ */
+//TODO : 불변객체로 만들어야 할까?
+public final class CoinSet {
+    private final List<Coin> coinSets;
+
+    private CoinSet(List<Coin> coinSets) {
         this.coinSets = coinSets;
     }
 
@@ -14,7 +21,7 @@ public final class CoinSet {
         return new CoinSet(new ArrayList<>());
     }
 
-    public void add(KoreaCoinType coin) {
+    public void add(Coin coin) {
         this.coinSets.add(coin);
     }
 }

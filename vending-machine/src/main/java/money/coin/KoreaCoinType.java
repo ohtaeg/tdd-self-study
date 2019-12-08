@@ -1,32 +1,18 @@
 package money.coin;
 
-import exception.InvalidCoinException;
-import money.Money;
-
-import java.util.Arrays;
-
 public enum KoreaCoinType {
-    TEN_WON(Money.of(10), 10)
-    , FIFTY_WON(Money.of(50), 50)
-    , ONE_HUNDRED_WON(Money.of(100), 100)
-    , FIVE_HUNDRED_WON(Money.of(500), 500);
+    TEN_WON(10)
+    , FIFTY_WON(50)
+    , ONE_HUNDRED_WON(100)
+    , FIVE_HUNDRED_WON(500);
 
-    private Money money;
     private int won;
 
-    KoreaCoinType(final Money money, final int won) {
-        this.money = money;
+    KoreaCoinType(final int won) {
         this.won = won;
     }
 
-    public Money getMoney() {
-        return money;
-    }
-
-    static KoreaCoinType of(int won) {
-        return Arrays.stream(values())
-                     .filter(coin -> coin.won == won)
-                     .findFirst()
-                     .orElseThrow(() -> new InvalidCoinException());
+    public int getWon() {
+        return won;
     }
 }
