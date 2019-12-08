@@ -1,15 +1,10 @@
 package money.coin;
 
 import exception.InvalidCoinException;
+import module.CoinChecker;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-
-import javax.swing.text.html.Option;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
@@ -21,7 +16,7 @@ class KoreaCoinTypeTest {
     @ValueSource(ints = {10, 50, 100, 500})
     void of(int input) {
         // when
-        KoreaCoinType actual = KoreaCoinType.of(input);
+        KoreaCoinType actual = CoinChecker.check(input);
 
         // then
         assertThat(actual).isInstanceOf(KoreaCoinType.class);
@@ -32,7 +27,7 @@ class KoreaCoinTypeTest {
     @ValueSource(ints = {5, 111, 123, 1000})
     void failOf(int input) {
         assertThatExceptionOfType(InvalidCoinException.class).isThrownBy(
-                () -> KoreaCoinType.of(input)
+                () -> CoinChecker.check(input)
         );
     }
 }
