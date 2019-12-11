@@ -5,11 +5,13 @@ import money.coin.KoreaCoinType;
 
 import java.util.Arrays;
 
-public final class CoinChecker {
-    public static KoreaCoinType check(int won) {
+public final class CoinChecker implements MoneyChecker {
+
+    @Override
+    public KoreaCoinType check(final Integer won) {
         return Arrays.stream(KoreaCoinType.values())
                      .filter(koreaCoin -> koreaCoin.getWon() == won)
                      .findFirst()
-                     .orElseThrow(() -> new InvalidCoinException());
+                     .orElseThrow(InvalidCoinException::new);
     }
 }
